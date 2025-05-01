@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Word Scramble Biz</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png" type="image/x-icon" />
+    <script src="js/words.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <header>
+        <h2 class="title"><span>W</span>ORD <span>S</span>CRAM<span>B</span>LE <span>B</span>IZ</h1>
+        <button id="logout-btn" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+        </button>
+    </header>
+
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <h3>CONFIRM LOGOUT</h3>
+            <p>Are you sure you want to log out?</p>
+            <div class="modal-buttons">
+                <button id="confirm-yes" class="modal-btn">Yes</button>
+                <button id="confirm-no" class="modal-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="correct-words-container">
+        <h3>✅Correct Words</h3>
+        <ul id="correct-words-list">
+        </ul>
+    </div>
+      
+    <div class="container">
+        <div id="player-name-container">
+            <p>Welcome, <span id="player-name-display">Player</span>!</p>
+        </div>
+        <div class="progress-tracker">
+            <span id="word-progress">Completed: 0 / 20</span>
+          </div>
+
+        <div class="timer-container">
+            <svg>
+                <circle cx="50" cy="50" r="45" id="progress-bg" />
+                <circle cx="50" cy="50" r="45" id="progress" class="progress" />
+            </svg>
+            <span class="time-text" id="time-text">60</span>
+        </div>
+
+        <div class="score-container">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+
+        <div class="content">
+            <div class="word-container">
+                <p class="word" id="scrambled-word"></p>
+                <button class="shuffle-btn">
+                    <img src="images/shuffle.png" alt="Shuffle Letters" />
+                </button>
+            </div>
+            
+            <p class="hint"><b>Hint:</b> <span id="hint"></span></p>
+            <input type="text" id="user-guess" placeholder="Enter the word" />
+            
+            <div class="buttons">
+                <button class="refresh-word" id="new-word">New Word</button>
+                <button class="check-word" id="check-word">Check</button>
+            </div>
+            
+            <div class="message-box" id="message-box">
+                <span class="message-text" id="message-text"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="leaderboard">
+        <h3>🏆Leaderboard🏆</h3>
+        <ul class="leaderboard-list" id="leaderboard-list">
+        </ul>
+    </div>
+    <div class="congrats-overlay" id="congratsModal">
+        <div class="congrats-box">
+          <h2>Congratulations! 🎉</h2>
+          <p>You have completed all the words! 🏆</p>
+          <div class="congrats-buttons">
+            <button id="play-again-btn" class="congrats-btn">Play Again</button>
+            <button id="exit-btn" class="exit-btn">Exit</button>
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      
+      
+    
+    
+
+  </body>
+</html>
